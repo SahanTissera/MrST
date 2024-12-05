@@ -1,0 +1,255 @@
+/* src/components/SectionStyles.css */
+
+/* General Section Styles */
+.section {
+  /*padding: 100px 20px 50px; /* Add extra padding at the top to avoid hiding content behind navbar */
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #4B0082; /* Dark purple */
+  font-size: 2rem; /* Ensure it has a large enough size */
+  visibility: visible; /* Make sure it is visible */
+  display: block; /* Ensure it is displayed as a block-level element */
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  flex-wrap: wrap; /* Wraps cards to the next line if needed */
+  justify-content: center; /* Center-aligns the cards within the section */
+  padding: 120px 20px 50px; /* Add extra padding at the top to avoid hiding content behind navbar */
+  gap: 20px; /* Adds space between cards */
+  margin: auto;
+}
+
+.services-section h2 {
+  width: 100%;
+  text-align: center;
+  color: #4B0082; /* Ensures heading color is visible */
+  font-size: 2rem; /* Ensure the heading is prominent */
+  margin-bottom: 30px;
+}
+
+/* Service Card Styling */
+.service-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 40px); /* Flex-grow: 1, Flex-basis: roughly one-third width */
+  max-width: 350px; /* Prevents cards from getting too large */
+  min-width: 280px; /* Ensures cards are not too narrow */
+  min-height: 400px; /* Set a minimum height for visual consistency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px; /* Ensures even spacing between cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is evenly distributed */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  color: #4b0082;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.service-card p {
+  flex-grow: 1; /* Makes sure paragraph takes up available space */
+  color: #4b0082;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Portfolio Section - Gallery Style */
+.portfolio-section {
+  padding: 120px 20px 50px; /* Add extra padding at the top to avoid hiding content behind navbar */
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align items within the container */
+  gap: 20px; /* Space between items */
+  margin-top: 40px;
+}
+
+.portfolio-item {
+  width: calc(33% - 40px); /* Roughly one-third of the container width minus gap */
+  max-width: 350px; /* Prevents items from being too large */
+  min-width: 280px; /* Ensures items have a reasonable minimum width */
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns content to have consistent card size */
+  min-height: 400px; /* Ensure consistent height for each portfolio card */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px; /* Set a fixed height to ensure images are consistent */
+  object-fit: cover; /* Ensures the image fits within the container without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  color: #4b0082;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  flex-grow: 1; /* Ensures description stays aligned to the bottom */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 120px 20px 50px; /* Add extra padding at the top to avoid hiding content behind navbar */
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Contact Container to Divide into Two Columns */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Contact Details (Left Side) */
+.contact-details {
+  flex: 1 1 45%;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-details h3 {
+  color: #4b0082;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.google-map {
+  margin-top: 20px;
+}
+
+/* Contact Form (Right Side) */
+.contact-form {
+  flex: 1 1 45%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  color: #4b0082;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #4b0082;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #8874a3;
+}
+
+/* Responsive Media Queries */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .portfolio-item,
+  .service-card {
+    width: calc(50% - 40px); /* Two items per row for tablets */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack vertically for tablets */
+  }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+  .portfolio-gallery,
+  .services-section,
+  .contact-container {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center; /* Center align items for a balanced look */
+  }
+
+  .portfolio-item,
+  .service-card,
+  .contact-details,
+  .contact-form {
+    width: 90%; /* Full width for better readability on mobile devices */
+    margin-bottom: 20px; /* Add spacing between stacked items */
+  }
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.text-purple {
+  color: #4b0082;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-muted {
+  color: rgba(75, 0, 130, 0.8);
+}
